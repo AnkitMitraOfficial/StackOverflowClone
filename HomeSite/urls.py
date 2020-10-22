@@ -29,12 +29,10 @@ urlpatterns = [
     path('Signup/',views.signupuser,name='signup'),
     path('login/',views.login,name='login'),
     
-
-    
 ]
+handler404 = 'Contact.views.error_404_view'
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 
 
 

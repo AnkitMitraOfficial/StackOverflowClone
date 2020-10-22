@@ -5,6 +5,10 @@ from django.shortcuts import render
 def home(request):
     return render (request,'Contact/home.html')
 
+
+def error_404_view(request, exception):
+    return render(request,'Contact/404.html')
+
 def landing(request):
     return render (request,'Contact/landing.html')
     
