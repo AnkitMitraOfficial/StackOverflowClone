@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    hr {
+   border-width: 2px;
+ }
+</style>
+<body>
+    <br>
+    <br>
+
+<div class="container">
+  <h2>Login to continue</h2>
+  <form method="POST">{% csrf_token %}<hr>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <p><small>Enter Your registered email</small></p>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label"><br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </label>
+</div><hr>
+<div class="container text-center">
+<a href="#">Forget Password?</a><br><br>
+<a href="{% url 'signup' %}">Do You Need a account?</a>
+</div>
+</form>
+</div>
+
+</body>
+</html>

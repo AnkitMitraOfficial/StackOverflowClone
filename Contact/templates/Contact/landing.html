@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Get started</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+  h2 {
+    color: brown;
+    text-align: center;
+  }
+  .i1,.i2 {
+    color:darkblue;
+  }
+
+  hr {
+    border-width: 2px;
+  }
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  </style>
+  </head>
+  <body>
+    <div class="alert alert-success alert-dismissible fade show">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      Hello User, Signup or Login to get started
+  </div>
+  
+  <h2>Frequently asked questions</h2>
+  
+  <button class="accordion">Why do I need to  Signup?</button>
+  <div class="panel">
+    <p>Signing up gives you the advantage to posts your questions in the site,If You are lucky you can get help From other's.Or in other simple words,Signup gives you the power to aceess the site :) </p>
+  </div>
+  
+  <button class="accordion">Why do I need to Login?</button>
+  <div class="panel">
+    <p>If You already have a account that's great,Sometimes you need to logout for any purpose then to enter again in our site, you need to login!</p>
+  </div>
+  
+  <button class="accordion">Section 3</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil architecto harum illum quidem aspernatur, temporibus, aliquam deleniti cum unde veniam minima, ut id nisi. Adipisci nostrum soluta quam vero obcaecati.</p>
+  </div><br><br>
+  <div class="container text-center">
+    <div>
+      <hr>
+      <form action="{% url 'signup' %}">
+        <p class="i1">Do You need a account?</p>
+        <button class="btn btn-danger" type="submit">Signup</button>
+      </form><br>
+    </div>
+    <div>
+      <form action="{% url 'login' %}">
+        <p class="i2" >Already have a account login here</p>
+        <button class="btn btn-primary" type="submit">Login</button>
+      </form>
+      <hr>
+    </div>
+  </div>
+  
+<body>
+ 
+
+</body>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>StackOverflow Clone</h1>
+  <p><strong><i>Helping one person may not change the World,but it can change the world for that Person</i></strong></p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Learn More!</h3>
+      <p>Education gives us a knowledge of the world around us and changes it into something better. It develops in us a perspective of looking at life</p>
+      <p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today....</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Some great quotes</h3>
+      <p><i>Live as if you were to die tomorrow. Learn as if you were to live forever</i></p>
+      <p><i>Education is what remains after one has forgotten what one has learned in school</i></p>
+      <br>
+      <div class="container text-center">
+        <form action="{% url 'landing' %}">
+          <button class="btn btn-primary" type="submit" >Get started</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h3>Get Motivated</h3>        
+      <p>The roots of education are bitter, but the fruit is sweet</p>
+      <p>Strive for progress, not perfection</p>
+      
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
