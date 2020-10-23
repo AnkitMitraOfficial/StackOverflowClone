@@ -1,163 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-<title>Sign up</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<style>
-body {
-	color: #fff;
-	background: #19aa8d;
-	font-family: 'Roboto', sans-serif;
-}
-.form-control {
-	font-size: 15px;
-}
-.form-control, .form-control:focus, .input-group-text {
-	border-color: #e1e1e1;
-}
-.form-control, .btn {        
-	border-radius: 3px;
-}
-.signup-form {
-	width: 400px;
-	margin: 0 auto;
-	padding: 30px 0;		
-}
-.signup-form form {
-	color: #999;
-	border-radius: 3px;
-	margin-bottom: 15px;
-	background: #fff;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 30px;
-}
-.signup-form h2 {
-	color: #333;
-	font-weight: bold;
-	margin-top: 0;
-}
-.signup-form hr {
-	margin: 0 -30px 20px;
-}
-.signup-form .form-group {
-	margin-bottom: 20px;
-}
-.signup-form label {
-	font-weight: normal;
-	font-size: 15px;
-}
-.signup-form .form-control {
-	min-height: 38px;
-	box-shadow: none !important;
-}	
-.signup-form .input-group-addon {
-	max-width: 42px;
-	text-align: center;
-}	
-.signup-form .btn, .signup-form .btn:active {        
-	font-size: 16px;
-	font-weight: bold;
-	background: #19aa8d !important;
-	border: none;
-	min-width: 140px;
-}
-.signup-form .btn:hover, .signup-form .btn:focus {
-	background: #179b81 !important;
-}
-.signup-form a {
-	color: #fff;	
-	text-decoration: underline;
-}
-.signup-form a:hover {
-	text-decoration: none;
-}
-.signup-form form a {
-	color: #19aa8d;
-	text-decoration: none;
-}	
-.signup-form form a:hover {
-	text-decoration: underline;
-}
-.signup-form .fa {
-	font-size: 21px;
-}
-.signup-form .fa-paper-plane {
-	font-size: 18px;
-}
-.signup-form .fa-check {
-	color: #fff;
-	left: 17px;
-	top: 18px;
-	font-size: 7px;
-	position: absolute;
-}
-</style>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #7abecc !important;
+		}
+		.user_card {
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #74cfbf;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #fff;
+		}
+		.login_btn {
+			width: 100%;
+			background: #33ccff !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #f7ba5b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+
+	</style>
+
 </head>
 <body>
-<div class="signup-form">
-    <form method="POST">{% csrf_token %}
-		<h2>Sign Up</h2>
-		<p>Please fill in this form to create an account!</p>
-		<hr>
-        <div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">
-						<span class="fa fa-user"></span>
-					</span>                    
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<h3 id="form-title">REGISTER ACCOUNT</h3>
 				</div>
-				<input type="text" class="form-control" name="username" placeholder="Username" required="required">
-			</div>
-			<p><small>Username must be good as it will be visible to thers </small></p>
-        </div>
-        <div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">
-						<i class="fa fa-paper-plane"></i>
-					</span>                    
-				</div>
-				<input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
-			</div>
-			<p><small>We will never share your email with anyone</small></p>
-        </div>
-		<div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">
-						<i class="fa fa-lock"></i>
-					</span>                    
-				</div>
-				<input type="password" class="form-control" name="password" placeholder="Password" required="required">
-			</div>
-        </div>
-		<div class="form-group">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">
-						<i class="fa fa-lock"></i>
-						<i class="fa fa-check"></i>
-					</span>                    
-				</div>
-				<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-			</div>
-        </div>
-        <div class="form-group">
-			<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-        </div>
-    </form>
-	<div class="text-center">Already have an account? <a href="{% url 'login' %}">Login here</a></div>
+				<div class="d-flex justify-content-center form_container">
 
-</div>
+					<form method="POST" action="">
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="username">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+							</div>
+							<input type="email" name="email">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="text" name="password1">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="text" name="password2">
+						</div>
+
+				   		<div class="d-flex justify-content-center mt-3 login_container">
+				 			<input class="btn login_btn" type="submit" value="Register Account">
+				   		</div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+						/* Because i didnt set placeholder values in forms.py they will be set here using vanilla Javascript
+		//We start indexing at one because CSRF_token is considered and input field 
+		 */
+
+		//Query All input fields
+		var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Username..';
+		form_fields[2].placeholder='Email..';
+		form_fields[3].placeholder='Enter password...';
+		form_fields[4].placeholder='Re-enter Password...';
+
+
+		for (var field in form_fields){	
+			form_fields[field].className += ' form-control'
+		}
+	</script>
 </body>
 </html>

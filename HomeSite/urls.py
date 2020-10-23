@@ -26,7 +26,7 @@ urlpatterns = [
      path('Contact/',views.contact,name='contact'),
 
      #Authentication,Should I make set of url in Authentication app?
-    path('Signup/',views.signupuser,name='signup'),
+    path('Signup/',views.signupuser,name='register'),
     path('login/',views.login,name='login'),
     
 ]
