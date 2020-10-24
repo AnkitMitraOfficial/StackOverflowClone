@@ -39,7 +39,7 @@ def contact(request):
         desc = request.POST.get('desc')
         contact = Contact(name=name,email=email,phone=phone,desc=desc)
         contact.save()
-        messages.success(request,'Your Message hs been sent!')
+        messages.success(request,'A new contact message has arrived!Check it out')
         return redirect('contact')
 
     
