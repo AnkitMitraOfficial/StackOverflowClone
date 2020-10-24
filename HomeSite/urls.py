@@ -19,6 +19,15 @@ from django.conf import settings
 from Contact import views
 from django.conf.urls.static import static
 
+admin.sites.AdminSite.site_header = 'StackOverFlow Clone Administration'
+admin.sites.AdminSite.site_title = 'StackOverFlow Clone Administration'
+admin.sites.AdminSite.index_title = 'Ankit Administration'
+
+
+admin.sites.AdminSite.site_header = 'Your own Administartion name'
+admin.sites.AdminSite.site_title = 'Your own Administartion name header'
+admin.sites.AdminSite.index_title = 'Ankit Administration'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
