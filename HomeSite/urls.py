@@ -23,11 +23,6 @@ admin.sites.AdminSite.site_header = 'StackOverFlow Clone Administration'
 admin.sites.AdminSite.site_title = 'StackOverFlow Clone Administration'
 admin.sites.AdminSite.index_title = 'Ankit Administration'
 
-
-admin.sites.AdminSite.site_header = 'Your own Administartion name'
-admin.sites.AdminSite.site_title = 'Your own Administartion name header'
-admin.sites.AdminSite.index_title = 'Ankit Administration'
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
@@ -39,7 +34,9 @@ urlpatterns = [
     path('login/',views.loginuser,name='login'),
     
 ]
-handler404 = 'Contact.views.error_404_view'
+
+
+handler404 = 'Contact.views.error_404_view'  #myapp.views.viewname
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

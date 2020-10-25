@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
-from datetime import datetime
 from .models import Contact
 from django.contrib import messages
 # Create your views here.
