@@ -32,4 +32,4 @@ Cons-
 None
 
 How can you download this github project?
-It's easy just hot on the "dowmload zip" button and you are all good to go
+It's easy just hit on the "download zip" button and you are all good to go
