@@ -15,9 +15,9 @@ Key points of our platform --
 
 3> Not a chatting app
 
-4> Not a dating app or social media platform
+4> Not a dating or social media platform
 
-5> educational platform
+5> Educational platform especially for technology lovers!
 
 
 Pros--
@@ -32,4 +32,4 @@ Cons-
 None
 
 How can you download this github project?
-It's easy just hit on the "download zip" button and you are all good to go
+It's easy as cutting a piece of cake,just hit on the "download zip" button or "clone" the project and then you are all good to go
