@@ -7,7 +7,6 @@ In this modern world we can't stay alive without each other's help,We all get st
 I'm a 15 year old boy who dreams to achieve great heights in his life.
 
 
-
 Key points of our platform --
 
 1> Simple and free for everyone
