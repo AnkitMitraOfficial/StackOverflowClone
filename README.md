@@ -37,7 +37,7 @@ Cons-
 
 1> Not offering any kind of jobs or postings
 
-2> Not a advanced UI/UX but satisfactory
+2> Do not have a advanced UI/UX but satisfactory
 
 Note - 
 
