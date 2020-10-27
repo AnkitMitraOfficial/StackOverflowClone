@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+</head>
+<body>
+    <h2>Woo! This is the blogs page :)</h2><br><br><br><hr>
+
+    {% for blog in blogs %}
+
+    <h2>{{ blog.title }}</h2>
+    {{ blog.date }}
+    <p>{{ blog.description }}</p>
+
+    {% endfor %}
+</body>
+</html>

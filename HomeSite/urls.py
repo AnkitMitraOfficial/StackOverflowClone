@@ -27,22 +27,20 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('Landingpage/',views.landing,name='landing'),
-     path('Contact/',views.contact,name='contact'),
+    path('Contact/',views.contact,name='contact'),
 
      #Authentication,Should I make set of url in Authentication app?
     path('Signup/',views.signupuser,name='register'),
     path('login/',views.loginuser,name='login'),
+
+
+     path('blog/', include('blog.urls')),
     
 ]
-
 
 handler404 = 'Contact.views.error_404_view'  #myapp.views.viewname
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-
-
 
 
 
