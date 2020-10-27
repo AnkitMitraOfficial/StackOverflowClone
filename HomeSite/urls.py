@@ -33,8 +33,9 @@ urlpatterns = [
     path('Signup/',views.signupuser,name='register'),
     path('login/',views.loginuser,name='login'),
 
-
+    #app urls
      path('blog/', include('blog.urls')),
+     path('home/', include('StackoverflowClone.urls')),
     
 ]
 
