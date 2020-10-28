@@ -15,6 +15,9 @@
     h2 {
       text-align: center;
     }
+    hr {
+      border-width: 2px;
+    }
   </style>
 </head>
   <form method="POST">
@@ -33,7 +36,7 @@
       </div>
       <div class="form-group">
         <div class="form-group">
-          <label for="phone">Enter a phone number (optional):</label><br>
+          <label for="phone">Enter a phone number (optional)</label><br>
           <input name="phone" type="tel" id="phone" name="phone" multiple class="form-control"
             placeholder="Enter Your Phone Number In the format given below " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
           <small>Format: 012-345-6789</small><br>
@@ -43,7 +46,7 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Describe Your Issue *</label>
           <textarea name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3"
-            placeholder="Please be detailed with your issue or problem or just say a hi" required></textarea><br>
+            placeholder="Please be detailed with your issue or just say a hi" required></textarea><br>
           <input class="btn btn-primary" type="submit">
         </div>
       </div>
