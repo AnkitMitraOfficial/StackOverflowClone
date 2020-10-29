@@ -28,6 +28,7 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('Landingpage/',views.landing,name='landing'),
     path('Contact/',views.contact,name='contact'),
+    path('search/',views.search,name='search'),
 
      #Authentication,Should I make set of url in Authentication app?
     path('Signup/',views.signupuser,name='register'),

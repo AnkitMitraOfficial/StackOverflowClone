@@ -1,0 +1,19 @@
+{% extends "StackoverflowClone/base.html" %}
+
+{% block title %}Search results{% endblock title %}
+{% block content %}
+
+<h3>Search results:</h3>
+{% for blog in blogs %}
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    <a href="{% url 'blog:detail' blog.id %}"> <!--This creates the clickable option on the blog title-->
+      <h2>{{ blog.title }}</h2>
+    </a>
+    <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
+    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

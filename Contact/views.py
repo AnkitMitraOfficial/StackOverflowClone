@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse
 from .forms import CreateUserForm
 from .models import Contact
+from blog.models import Blog
 from django.contrib import messages
 # Create your views here.
 
@@ -13,6 +15,12 @@ def error_404_view(request, exception):
 
 def landing(request):
     return render (request,'Contact/landing.html')
+
+def search(request):
+    query = request.GET['query']
+    blogs = Blog.objects.filter(title__icontains=query)
+    params = {'blogs':blogs}
+    return render (request,'Contact/search.html', params)
     
 def signupuser(request):
     form = CreateUserForm()
