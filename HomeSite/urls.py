@@ -26,12 +26,12 @@ admin.sites.AdminSite.index_title = 'Ankit Administration'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('Landingpage/',views.landing,name='landing'),
+    path('landingpage/',views.landing,name='landing'),
     path('Contact/',views.contact,name='contact'),
     path('search/',views.search,name='search'),
 
      #Authentication,Should I make set of url in Authentication app?
-    path('Signup/',views.signupuser,name='register'),
+    path('signup/',views.signupuser,name='register'),
     path('login/',views.loginuser,name='login'),
 
     #app urls

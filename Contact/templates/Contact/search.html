@@ -2,18 +2,33 @@
 
 {% block title %}Search results{% endblock title %}
 {% block content %}
+<br>
+<div class="container">
+  <h3>Search results:</h3>
+  {% if blogs|length < 1 %}
+  <p>No search Results found</p>
 
-<h3>Search results:</h3>
-{% for blog in blogs %}
-<div class="row justify-content-center my-3">
-  <div class="col-md-10">
-    <a href="{% url 'blog:detail' blog.id %}"> <!--This creates the clickable option on the blog title-->
-      <h2>{{ blog.title }}</h2>
-    </a>
-    <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+  Your search -  <kbd>{{ query }}</kbd>  - did not match any documents.<br>
+<br>
+Suggestions:
+<ul>
+<li>Make sure that all words are spelled correctly</li>
+<li>Try different keywords.</li>
+<li>Try more general keywords.</li>
+<li>Try fewer keywords.</li>
+</ul>
+  {% endif %}
+  {% for blog in blogs %}
+  <div class="row justify-content-center my-3">
+    <div class="col-md-10">
+      <a href="{% url 'blog:detail' blog.id %}">
+        <!--This creates the clickable option on the blog title-->
+        <h2>{{ blog.title }}</h2>
+      </a>
+      <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
+      <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+    </div>
   </div>
-</div>
-{% endfor %}
+  {% endfor %}
 
-{% endblock %}
+  {% endblock %}

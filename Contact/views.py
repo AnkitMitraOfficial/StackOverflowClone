@@ -18,8 +18,16 @@ def landing(request):
 
 def search(request):
     query = request.GET['query']
-    blogs = Blog.objects.filter(title__icontains=query)
-    params = {'blogs':blogs}
+    if len(query) > 50:
+        blogs = Blog.objects.none()
+    else:
+        blogstittle = Blog.objects.filter(title__icontains=query)
+        blogscontent = Blog.objects.filter(description__icontains=query)
+        blogs = blogstittle.union(blogscontent)
+    
+    if blogs.count() == 0:
+        messages.warning(request, 'Please fill the form correctly')
+    params = {'blogs':blogs,'query':query}
     return render (request,'Contact/search.html', params)
     
 def signupuser(request):
