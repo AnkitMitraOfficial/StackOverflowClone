@@ -27,6 +27,7 @@ def search(request):
     
     if blogs.count() == 0:
         messages.warning(request, 'Please fill the form correctly')
+        
     params = {'blogs':blogs,'query':query}
     return render (request,'Contact/search.html', params)
     
@@ -52,10 +53,12 @@ def contact(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        contact = Contact(name=name,email=email,phone=phone,desc=desc)
-        contact.save()
-        messages.success(request,'A new contact message has arrived!Check it out')
-        return redirect('contact')
 
-    
+        if len(name)<5 or len(desc)<20:
+            messages.error(request,'Name must be 5 characters long,and the message should contains 20 characters!')
+        else:
+            contact = Contact(name=name,email=email,phone=phone,desc=desc)
+            contact.save()
+            messages.success(request,'Your message has been successfully sent!')
+            return redirect('contact')
     return render (request,'Contact/contact.html')

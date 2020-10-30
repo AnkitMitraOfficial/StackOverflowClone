@@ -24,7 +24,7 @@
     {% csrf_token %}
     <div class="container ">
       <h2>Contact Us</h2><hr>
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="form-group">
           <label for="exampleFormControlInput1">Email address *</label>
         <input name="email" type="email" class="form-control" id="exampleFormControlInput1"
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlSelect1">Your Name *</label>
-        <input name="name" type="text" multiple class="form-control" required placeholder="Your Name">
+        <input name="name" type="text" multiple class="form-control" placeholder="Your Name">
       </div>
       <div class="form-group">
         <div class="form-group">
@@ -46,7 +46,7 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Describe Your Issue *</label>
           <textarea name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3"
-            placeholder="Please be detailed with your issue or just say a hi" required></textarea><br>
+            placeholder="Please be detailed with your issue" ></textarea><br>
           <input class="btn btn-primary" type="submit">
         </div>
       </div>
