@@ -18,19 +18,24 @@ def landing(request):
 
 def search(request):
     query = request.GET['query']
-    if len(query) > 50:
+    if len(query) > 15:
+        messages.warning(request, 'Search query must be a maximum of 15 characterss')
         blogs = Blog.objects.none()
+    if len(query) <5:
+        messages.warning(request, 'Search query must be minimum 5 characters')
+        blogs = Blog.objects.none()
+
     else:
         blogstittle = Blog.objects.filter(title__icontains=query)
         blogscontent = Blog.objects.filter(description__icontains=query)
         blogs = blogstittle.union(blogscontent)
     
     if blogs.count() == 0:
-        messages.warning(request, 'Please fill the form correctly')
+        messages.warning(request, 'No search results found,Kindly refine your query')
         
     params = {'blogs':blogs,'query':query}
     return render (request,'Contact/search.html', params)
-    
+
 def signupuser(request):
     form = CreateUserForm()
 
