@@ -59,8 +59,8 @@ def contact(request):
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
 
-        if len(name)<5 or len(desc)<20:
-            messages.error(request,'Name must be 5 characters long,and the message should contains 20 characters!')
+        if len(desc) < 20:
+            messages.error(request,'The message should contain atleast 20 characters!')
         else:
             contact = Contact(name=name,email=email,phone=phone,desc=desc)
             contact.save()
