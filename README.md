@@ -18,39 +18,34 @@ I'm a 15 year old boy who dreams to achieve great heights in his life.
 
 ## Key points of our platform
 
-1> Simple and free for everyone to use
+1. Simple and free for everyone to use
 
-2> Only genuine information
+1. Only genuine information
 
-3> Not a chatting app
+1. Not a chatting app
 
-4> Not a dating or social media platform
+1. Not a dating or social media platform
 
-5> Educational platform especially for technology lovers!
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Educational platform especially for technology lovers!
 
 ## Pros
 
-1> Saves your time by taking help from the people worldwide
+1. Saves your time by taking help from the people worldwide
 
-2> Get educated!
+1. Get educated!
 
-3> Simple UI/UX
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Simple UI/UX
 
 ## Cons
 
-1> Not offering any kind of jobs or postings
+1. Not offering any kind of jobs or postings
 
-2> Do not have a advanced UI/UX but satisfactory
+1. Do not have a advanced UI/UX but satisfactory
 
 ## Note
 
-  This doesn't means the features are limited, our platform will get updates and try to give you the best User experience.
+This doesn't means the features are limited, our platform will get updates and try to give you the best User experience.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## How can you download this github project?
 
