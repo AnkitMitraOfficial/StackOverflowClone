@@ -3,14 +3,18 @@
 {% load static %}
 
 {% block content %}
-<style></style>
+<style>
+	hr {
+		border-width: 2px;
+	}
+</style>
 <br>
 <form>
 	<div class="container">
 		<hr>
 	<div class="form-group">
 	  <label for="exampleInputEmail1">Email address</label>
-	  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+	  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 	  <small id="emailHelp" class="form-text text-muted">Type in your Registered email</small>
 	</div>
 	<div class="form-group">
@@ -24,7 +28,7 @@
 	<button type="submit" class="btn btn-primary">Submit</button><br>
 
 	<div class="text-center">
-		<a href="{% url 'register' %}">Need a Account?Click Here</a>
+		<a href="{% url 'register' %}">Need a Account?</a>
 	</div>
 	<hr>
 </div>
