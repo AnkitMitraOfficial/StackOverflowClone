@@ -9,6 +9,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <style>
     hr {
       border-width: 2px;
@@ -16,7 +24,7 @@
 
     .i1,
     .i2 {
-      color: darkblue;
+      color: rgb(20, 169, 238);
     }
 
     .accordion {
@@ -45,8 +53,81 @@
       transition: max-height 0.2s ease-out;
     }
 
-    
-    
+    .footer {
+      padding: 60px 0;
+      width: 100%;
+      background: #3B008D;
+      color: #fff;
+
+    }
+
+    .footer-title {
+      position: relative;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #4e4e4e;
+    }
+
+    .footer-title:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 30px;
+      height: 4px;
+      background: #ff304d;
+    }
+
+    .footer-links a {
+      padding: 10px 0;
+      border-bottom: 1px solid #404040;
+      color: #fff;
+      display: block;
+      transition: color 0.5s ease-in-out;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ff304d;
+    }
+
+    .footer-social-links li {
+      display: inline-block;
+    }
+
+    .footer-social-links a {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      float: left;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #404040;
+      border-radius: 50px;
+      text-align: center;
+      color: #fff;
+      line-height: 1;
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+      background: #3B008D;
+    }
+
+    .footer-social-links a:hover {
+      background: #ff304d;
+    }
+
+    /* g. Footer bottom section */
+    .footer-bottom {
+      width: 100%;
+      padding: 25px 0;
+      text-align: center;
+      color: #fff;
+      background: rgb(9, 95, 234);
+    }
   </style>
 
 </head>
@@ -56,7 +137,7 @@
   <div class="jumbotron text-center ">
     <h1>We <3 people who code</h1> <br>
         <p><strong><i>Questions are everywhere, answers are on StackOverflow Clone</i></strong></p>
-        <a class="btn btn-outline-primary" href="#frevery">For Developers</a>
+        <a class="btn btn-outline-primary" href="#foreveryone">For Developers</a>
         <a class="btn btn-outline-danger mx-3" href="#Q&A">Most asked questions</a>
   </div>
   <div class="container">
@@ -90,7 +171,7 @@
   <br>
   <div class="container">
     <div class="text-center">
-      <h2 id="frevery">For Developers, by Developers</h2><br>
+      <h2 id="foreveryone">For Developers, by Developers</h2><br>
       <h4>
         <pre>
       Stack Overflow Clone is an open community for anyone who codes or want help. 
@@ -122,32 +203,115 @@
 
   <button class="accordion">Section 3</button>
   <div class="panel">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil architecto harum illum quidem aspernatur,
-      temporibus, aliquam deleniti cum unde veniam minima, ut id nisi. Adipisci nostrum soluta quam vero obcaecati.</p>
+    <p> Stack Overflow Clone is an open community for anyone who codes or want help. We help you get answers to your toughest coding questions, share knowledge with dy to ace your next dream job.</p>
   </div><br><br>
-  Ignore the Bottom, gonna improve it!
-  <h2>Here will be a nice footer</h2>
-  <h3>And so on!</h3>
-  <br>
   </div>
   </div>
-</body>
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
-</script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <footer class="page-footer bg-dark">
+
+    <div class="bg-success">
+      <div class="container">
+        <div class="row py-4 d-flex align-items-cemter">
+          <div class="col-md-12 text-center">
+            <a href="https://www.facebook.com/ankit.mitra.9028/ " target="_blank"><i class="fab fa-facebook-f mr-4 "></i></a>
+            <a href="https://www.instagram.com/ankit_coder1/" target="_blank"><i class="fab fa-instagram mr-4 "></i></a>
+            <a href="mailto:ankitmitra486@gmail.com" target="_blank"><i class="far fa-envelope-open mr-4"></i></a>
+            <a href="http://ankitmitra.pythonanywhere.com/" target="_blank"><i class="fas fa-external-link-alt mr-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" container text-center text-md-left mt-5 ">
+      <div class="row">
+        <div class="col-md-3 mb-4 mx-auto">
+          <h6 class="text-uppercase font-weight-bold">Stack Overflow Clone</h6>
+          <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 125px; height: 2px;">
+          <p class="mt-2"> Stack Overflow Clone is an open community for anyone who codes or want help. 
+            We help you get answers to your toughest coding questions, share knowledge with 
+            others worldwide and get help when you are stuck , get ready to ace your next dream job.</p>
+        </div>
+
+        <div class="col-md-3 mb-4 mx-auto">
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 125px; height: 2px;">
+          <ul class="list unstyled">
+            <li class="my-2"><a href="#">Services</a></li>
+            <li class="my-2"><a href="#">About Us</a></li>
+            <li class="my-2"><a href="#">Terms and Policy</a></li>
+            <li class="my-2"><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4 mx-auto">
+          <h6 class="text-uppercase font-weight-bold">Useful Links</h6>
+          <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 110px; height: 2px;">
+
+          <ul class="list unstyled">
+            <li class="my-2"><a href="#">Blog</a></li>
+            <li class="my-2"><a href="#">Contact Us</a></li>
+            <li class="my-2"><a href="#">Terms and Policy</a></li>
+            <li class="my-2"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4 mx-auto">
+          <h6 class="text-uppercase font-weight-bold">Contacts</h6>
+          <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 110px; height: 2px;">
+
+          <ul class="list unstyled">
+            <li class="my-2"><i class="fas fa-home"></i> India, West-Bengal, Howrah</li>
+            <li class="my-2"><i class="fas fa-phone"></i> 91+ 6291434319</li>
+            <li class="my-2"><i class="fas fa-envelope"></i> ankitmitra486@gmail.com </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center  py-2">
+      <p>&copy; All Rights Reserverd 2020<br>
+        <a href="#">Stack Overflow Clone</a>
+      </p>
+
+
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  </div>
+  </div>
+  </div>
+
+
 </body>
 
 </html>
