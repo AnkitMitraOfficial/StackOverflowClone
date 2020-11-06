@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Welcome Page</title>
   <meta charset="utf-8">
@@ -8,39 +9,145 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    hr {
+      border-width: 2px;
+    }
+
+    .i1,
+    .i2 {
+      color: darkblue;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    
+    
+  </style>
+
 </head>
+
 <body>
 
-<div class="jumbotron text-center ">
-  <h1>We <3 people who code</h1><br>
-  <p><strong><i>Questions are everywhere, answers are on StackOverflow Clone</i></strong></p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Learn More!</h3>
-      <p>Education gives us a knowledge of the world around us and changes it into something better. It develops in us a perspective of looking at life</p>
-      <p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today....</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Some great quotes</h3>
-      <p><i>Live as if you were to die tomorrow. Learn as if you were to live forever</i></p>
-      <p><i>Education is what remains after one has forgotten what one has learned in school</i></p>
-      <br>
-      <div class="container text-center">
-        <form action="{% url 'homepage' %}">
-          <button class="btn btn-primary" type="submit" >Get started</button>
-        </form>
+  <div class="jumbotron text-center ">
+    <h1>We <3 people who code</h1> <br>
+        <p><strong><i>Questions are everywhere, answers are on StackOverflow Clone</i></strong></p>
+        <a class="btn btn-outline-primary" href="#frevery">For Developers</a>
+        <a class="btn btn-outline-danger mx-3" href="#Q&A">Most asked questions</a>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Learn More!</h3>
+        <p>Education gives us a knowledge of the world around us and changes it into something better. It develops in us
+          a perspective of looking at life</p>
+        <p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today....</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Some great quotes</h3>
+        <p><i>Live as if you were to die tomorrow. Learn as if you were to live forever</i></p>
+        <p><i>Education is what remains after one has forgotten what one has learned in school</i></p>
+        <br>
+        <div class="container text-center">
+          <form action="{% url 'homepage' %}">
+            <button class="btn btn-primary " type="submit">Get started</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h3>Get Motivated</h3>
+        <p>The roots of education are bitter, but the fruit is sweet</p>
+        <p>Strive for progress, not perfection</p>
       </div>
     </div>
-    <div class="col-sm-4">
-      <h3>Get Motivated</h3>        
-      <p>The roots of education are bitter, but the fruit is sweet</p>
-      <p>Strive for progress, not perfection</p>
-      
-    </div>
+    <br>
+    <hr>
   </div>
-</div>
+  <br>
+  <div class="container">
+    <div class="text-center">
+      <h2 id="frevery">For Developers, by Developers</h2><br>
+      <h4>
+        <pre>
+      Stack Overflow Clone is an open community for anyone who codes or want help. 
+
+      We help you get answers to your toughest coding questions, share knowledge with 
+
+      others worldwide and get help when you are stuck , get ready to ace your next dream job.
+      </pre>
+      </h4>
+    </div>
+    <hr>
+  </div>
+  <br>
+  <br>
+
+  <h2 id="Q&A">Frequently asked questions</h2>
+  <br>
+  <button class="accordion">Why do I need to Signup?</button>
+  <div class="panel">
+    <p>Signing up gives you the advantage to posts your questions in the site,If You are lucky you can get help From
+      other's.Or in other simple words,Signup gives you the power to aceess the site :) </p>
+  </div>
+
+  <button class="accordion">Why do I need to Login?</button>
+  <div class="panel">
+    <p>If You already have a account that's great,Sometimes you need to logout for any purpose then to enter again in
+      our site, you need to login!</p>
+  </div>
+
+  <button class="accordion">Section 3</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil architecto harum illum quidem aspernatur,
+      temporibus, aliquam deleniti cum unde veniam minima, ut id nisi. Adipisci nostrum soluta quam vero obcaecati.</p>
+  </div><br><br>
+  Ignore the Bottom, gonna improve it!
+  <h2>Here will be a nice footer</h2>
+  <h3>And so on!</h3>
+  <br>
+  </div>
+  </div>
 </body>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+</body>
+
 </html>

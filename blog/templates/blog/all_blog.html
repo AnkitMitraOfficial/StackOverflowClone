@@ -3,7 +3,11 @@
 {% load static %}
 
 {% block content %}
-
+<style>
+  h2 {
+    color: rgb(19, 168, 255);
+  }
+</style>
 <h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
 <!--This is the line to count the blogs ,{{ blogs.count|pluralize }} this code sets the blog/blogs and this {{ blogs.count }} counts  the blogs/blog-->
 <h3 class="text-center mb-5">Ankit Mitra has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
@@ -11,11 +15,10 @@
 {% for blog in blogs %}
 <div class="row justify-content-center my-3">
   <div class="col-md-10">
-    <a href="{% url 'blog:detail' blog.id %}"> <!--This creates the clickable option on the blog title-->
       <h2>{{ blog.title }}</h2>
-    </a>
     <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4><br>
+    <a  class="btn btn-outline-danger" href="{% url 'blog:detail' blog.id %}">Read More</a>
   </div>
 </div>
 {% endfor %}

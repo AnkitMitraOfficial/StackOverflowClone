@@ -7,11 +7,10 @@
 
 <h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
 <div class="container text-center">
-<h5>{{ blog.description|safe }}</h5>
+    <h5>{{ blog.description|safe }}</h5>
 </div>
-
 <br>
-<br><br><br><br>
+<hr>
 <div class="container text-center"><a class="btn btn-danger" href="{% url 'homepage' %}">Home</a>
 </div>
 {% endblock %}
