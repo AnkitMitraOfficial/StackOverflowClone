@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
-from .forms import CreateUserForm
+from django.contrib.auth.models import User
+from django.http import HttpResponse
 from .models import Contact
 from blog.models import Blog
 from django.contrib import messages
@@ -37,16 +37,11 @@ def search(request):
     return render (request,'Contact/search.html', params)
 
 def signupuser(request):
-    form = CreateUserForm()
-
     if request.method == 'POST':
-        form = CreateUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            redirect('login')
-            
-    context = {'form':form}
-    return render (request,'Authentication/signupuser.html')
+        return HttpResponse ('Hello World')
+
+    else:
+        return HttpResponse ('Hello') 
 
 def loginuser(request):
     context = {}
