@@ -20,6 +20,70 @@
   <style>
     hr {
       border-width: 2px;
+      color: red;
+    }
+ * {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+      .columns {
+        width: 100%;
+      }
+    }
+
+    hr {
+      border-width: 2px;
     }
 
     .i1,
@@ -135,7 +199,7 @@
 <body>
 
   <div class="jumbotron text-center ">
-    <h1>We <3 people who code</h1> <br>
+    <h1>Stack Overflow Clone</h1> <br>
         <p><strong><i>Questions are everywhere, answers are on StackOverflow Clone</i></strong></p>
         <a class="btn btn-outline-primary" href="#foreveryone">For Developers</a>
         <a class="btn btn-outline-danger mx-3" href="#Q&A">Most asked questions</a>
@@ -153,11 +217,11 @@
         <p><i>Live as if you were to die tomorrow. Learn as if you were to live forever</i></p>
         <p><i>Education is what remains after one has forgotten what one has learned in school</i></p>
         <br>
-        <div class="container text-center">
+        <!-- <div class="container text-center">
           <form action="{% url 'homepage' %}">
             <button class="btn btn-primary " type="submit">Get started</button>
           </form>
-        </div>
+        </div> -->
       </div>
       <div class="col-sm-4">
         <h3>Get Motivated</h3>
@@ -166,48 +230,69 @@
       </div>
     </div>
     <br>
+  </div>
+  </div>
+  <div class="container text-center">
+    <form action="{% url 'homepage' %}">
+      <button class="btn btn-primary " type="submit">Get started</button>
+    </form>
+  </div>
+  
+  <div class="container text-center">
+    <hr>
+    <h2 id="foreveryone">For Developers, by Developers</h2><br>
+    <h4>
+      <p>
+      Stack Overflow Clone is an open community for anyone who codes or want help.
+      We help you get answers to your toughest coding questions, share knowledge with
+    others worldwide and get help when you are stuck , get ready to ace your next dream job
+      </p>
+    </h4>
     <hr>
   </div>
+  </div>
   <br>
+  <br>
+
   <div class="container">
-    <div class="text-center">
-      <h2 id="foreveryone">For Developers, by Developers</h2><br>
-      <h4>
-        <pre>
-      Stack Overflow Clone is an open community for anyone who codes or want help. 
-
-      We help you get answers to your toughest coding questions, share knowledge with 
-
-      others worldwide and get help when you are stuck , get ready to ace your next dream job.
-      </pre>
-      </h4>
+    <h2 class="text-center" id="Q&A">Frequently asked questions</h2>
+    <br>
+    <button class="accordion">Why do I need to Signup?</button>
+    <div class="panel">
+      <p>Signing up gives you the advantage to posts your questions in the site,If You are lucky you can get help From
+        other's.Or in other simple words,Signup gives you the power to aceess the site :) </p>
     </div>
+
+    <button class="accordion">Why do I need to Login?</button>
+    <div class="panel">
+      <p>If You already have a account that's great,Sometimes you need to logout for any purpose then to enter again in
+        our site, you need to login!</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p> Stack Overflow Clone is an open community for anyone who codes or want help. We help you get answers to your
+        toughest coding questions, share knowledge with dy to ace your next dream job.</p>
+    </div><br><br>
     <hr>
   </div>
-  <br>
-  <br>
-
-  <h2 id="Q&A">Frequently asked questions</h2>
-  <br>
-  <button class="accordion">Why do I need to Signup?</button>
-  <div class="panel">
-    <p>Signing up gives you the advantage to posts your questions in the site,If You are lucky you can get help From
-      other's.Or in other simple words,Signup gives you the power to aceess the site :) </p>
   </div>
-
-  <button class="accordion">Why do I need to Login?</button>
-  <div class="panel">
-    <p>If You already have a account that's great,Sometimes you need to logout for any purpose then to enter again in
-      our site, you need to login!</p>
   </div>
-
-  <button class="accordion">Section 3</button>
-  <div class="panel">
-    <p> Stack Overflow Clone is an open community for anyone who codes or want help. We help you get answers to your toughest coding questions, share knowledge with dy to ace your next dream job.</p>
+<br><br>
+  <div class="container text-center">
+    <p><b>Our Website is free to use, what are you waiting for?</b></p><br>
+      <ul class="price">
+        <li class="header" style="background-color:#4CAF50">Free</li>
+        <li class="grey">$ 0 / year</li>
+        <li>Unlimited accounts</li>
+        <li>Ask Unlimited questions</li>
+        <li>24x7 Support</li>
+        <li>Free for lifetime!</li>
+        <li class="grey"><a href="{% url 'homepage' %}" class="button">Let's Go!</a></li>
+      </ul>
+    </div>
   </div><br><br>
-  </div>
-  </div>
-
+  <br>
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -230,10 +315,12 @@
       <div class="container">
         <div class="row py-4 d-flex align-items-cemter">
           <div class="col-md-12 text-center">
-            <a href="https://www.facebook.com/ankit.mitra.9028/ " target="_blank"><i class="fab fa-facebook-f mr-4 "></i></a>
+            <a href="https://www.facebook.com/ankit.mitra.9028/ " target="_blank"><i
+                class="fab fa-facebook-f mr-4 "></i></a>
             <a href="https://www.instagram.com/ankit_coder1/" target="_blank"><i class="fab fa-instagram mr-4 "></i></a>
             <a href="mailto:ankitmitra486@gmail.com" target="_blank"><i class="far fa-envelope-open mr-4"></i></a>
-            <a href="http://ankitmitra.pythonanywhere.com/" target="_blank"><i class="fas fa-external-link-alt mr-4"></i></a>
+            <a href="http://ankitmitra.pythonanywhere.com/" target="_blank"><i
+                class="fas fa-external-link-alt mr-4"></i></a>
           </div>
         </div>
       </div>
@@ -244,8 +331,8 @@
         <div class="col-md-3 mb-4 mx-auto">
           <h6 class="text-uppercase font-weight-bold">Stack Overflow Clone</h6>
           <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 125px; height: 2px;">
-          <p class="mt-2"> Stack Overflow Clone is an open community for anyone who codes or want help. 
-            We help you get answers to your toughest coding questions, share knowledge with 
+          <p class="mt-2"> Stack Overflow Clone is an open community for anyone who codes or want help.
+            We help you get answers to your toughest coding questions, share knowledge with
             others worldwide and get help when you are stuck , get ready to ace your next dream job.</p>
         </div>
 
@@ -253,22 +340,20 @@
           <h6 class="text-uppercase font-weight-bold">Products</h6>
           <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 125px; height: 2px;">
           <ul class="list unstyled">
-            <li class="my-2"><a href="#">Services</a></li>
+            <li class="my-2"><a href="https://github.com/AnkitMItraOfficial/StackOverFlow-Clone" target="blank">Github Project</a></li>
             <li class="my-2"><a href="#">About Us</a></li>
             <li class="my-2"><a href="#">Terms and Policy</a></li>
             <li class="my-2"><a href="#">Cookies</a></li>
           </ul>
         </div>
-
         <div class="col-md-3 mb-4 mx-auto">
-          <h6 class="text-uppercase font-weight-bold">Useful Links</h6>
+          <h6 class="text-uppercase font-weight-bold">Explore</h6>
           <hr class="bg-success mb-4 mt-0 mx-auto d-inline-block" style="width: 110px; height: 2px;">
-
           <ul class="list unstyled">
-            <li class="my-2"><a href="#">Blog</a></li>
-            <li class="my-2"><a href="#">Contact Us</a></li>
-            <li class="my-2"><a href="#">Terms and Policy</a></li>
-            <li class="my-2"><a href="#">Contact Us</a></li>
+            <li class="my-2"><a href="{% url 'blog:blog' %}">Blog</a></li>
+            <li class="my-2"><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li class="my-2"><a href="#">Donate Us</a></li>
+            <li class="my-2"><a href="#">Request a Feature</a></li>
           </ul>
         </div>
         <div class="col-md-3 mb-4 mx-auto">
@@ -277,26 +362,19 @@
 
           <ul class="list unstyled">
             <li class="my-2"><i class="fas fa-home"></i> India, West-Bengal, Howrah</li>
-            <li class="my-2"><i class="fas fa-phone"></i> 91+ 6291434319</li>
-            <li class="my-2"><i class="fas fa-envelope"></i> ankitmitra486@gmail.com </li>
+            <li class="my-2"><i class="fas fa-phone"></i> <a href="tel:6291434319">Call 6291434319</a></li>
+            <li class="my-2"><i class="fas fa-envelope"></i> <a
+                href="mailto:ankitmitra486@gmail.com">ankitmitra486@gmail.com </a></li>
           </ul>
         </div>
       </div>
     </div>
-
     <div class="footer-copyright text-center  py-2">
       <p>&copy; All Rights Reserverd 2020<br>
         <a href="#">Stack Overflow Clone</a>
       </p>
-
-
     </div>
-
   </footer>
-
-
-
-
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
