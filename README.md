@@ -54,5 +54,21 @@ It's easy as cutting a piece of cake,just hit on the "download zip" button or "c
 ## License?
 
 It's a free open-source project, anyone who wish can use this project by downloading it. Anyone can modify the project, edit things and delete things. No Restrictions!
-   
+ 
+
+## How to use this project after downloding?
+
+Open this project by any of your ide/text-editor to edit it and view it.
+
+## How to use this project after downloding?
+
+Simply open a termina/cmd and cd to the folder where you have stored this project, and then type the following command in your terminal/cmd -- "cd StackOverFlow-Clone",to move inside the project, and then run  -- "python manage.py runserver" to run the server, and then type " http://127.0.0.1:8000/ " in your favorite browser to view the project.
+
+A quick Summary --
+1. Open a terminal/cmd
+2. cd to the folder, where you have this project installed/clone
+3. cd "StackOverFlow-Clone" to move inside the project
+4. then type cd " python manage.py runserver " to run the project
+5. and then type " http://127.0.0.1:8000/ " in your browser, to view this project 
+
 Happy coding!
