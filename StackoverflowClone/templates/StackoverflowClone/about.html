@@ -2,12 +2,82 @@
 
 {% block content %}
 
-<p>this is home page</p>
+<style>
+  hr {
+    border-width: 2px;
+  }
+</style>
 
+<div class="jumbotron">
+  <h3 class="display-4">About Us</h3><br>
+  <small class="lead">Who we are</small><br>
+  <h4 class="lead">Helping developers and technologists write the script of the future.</h4>
+  <hr class="my-4">
+  <pre>Helping one person might not change the world, but it could change the world for that person.
 
+                                                                                -- Ankit Mitra</pre>
+</div>
+<div class="container">
+  <h3 class="text-center">Our team</h3><br>
+  <div class="row featurette mt-4"><br>
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Ankit Mitra ---<span class="text-muted"> Owner, Founder</span></h2><br>
+      <p class="lead">I started coding when I was 14 years old, ever since I want to be a Full Stack Developer,
+        I knew it wouldn't be easy and I have to get through many obstacles I may not be the smartest
+        person and my whole life people told me no,
+        But coding was the only thing that accepted me, It welcomes anyone with open arms,
+        no matter who are you or where you are form. All you need is a notepad and world becomes your canvas.
+        My aim is to make the world more open and connected </p>
+      <p>Basic info:</p>
+      <ul>
+        <li>Name - Ankit Mitra</li>
+        <li>Age - 15</li>
+        <li>Hometown - India, Howrah </li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+        aria-label="Placeholder: 500x500">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+      </svg>
+    </div>
+  </div>
+  <hr>
+</div>
+<br><br>
+<div class="container">
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Thomas Güttler --- <span class="text-muted">Ceo, Founder</span></h2>
+      <p class="lead">I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From
+        1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP
+        and finally Python.
+        Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes
+        yourself, or read from the mistakes which were done by other people.
+        This list <b><a href="https://github.com/guettli/programming-guidelines">summarises</a></b> a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
+        It's my personal opinion and feeling. No facts, no single truth.</p>
+        <p>Basic info:</p>
+        <ul>
+          <li>Name - Thomas Güttler</li>
+          <li>Age - 44</li>
+          <li>Hometown - Germany, Stuttgart </li>
+        </ul>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+        aria-label="Placeholder: 500x500">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+      </svg>
+    </div>
+  </div><br>
+  <hr>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2020 Stack Overflow Clone <a class="mx-4" href="{% url 'home' %}">Home</a>  <a class="mx-4" href="{% url 'contact' %}">Contact Us</a></p>
+  </footer>
 
-
-
-
-
-{% endblock content %}
+  {% endblock content %}

@@ -26,8 +26,7 @@ admin.sites.AdminSite.index_title = 'Ankit Administration'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('landingpage/',views.landing,name='landing'),
-    path('Contact/',views.contact,name='contact'),
+    path('contact/',views.contact,name='contact'),
     path('search/',views.search,name='search'),
 
     path('signup/',views.signupuser,name='register'),
@@ -39,7 +38,7 @@ urlpatterns = [
     
 ]
 
-handler404 = 'Contact.views.error_404_view'  #myapp.views.viewname
+handler404 = 'Contact.views.error_404_view' 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
