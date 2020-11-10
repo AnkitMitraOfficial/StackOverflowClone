@@ -1,7 +1,9 @@
 {% extends 'StackoverflowClone/base.html' %}
 
 {% block content %}
+{% load static %}
 
+<title>About Us</title>
 <style>
   hr {
     border-width: 2px;
@@ -9,7 +11,7 @@
 </style>
 
 <div class="jumbotron">
-  <h3 class="display-4">About Us</h3><br>
+  <h3 class="display-4 text-center">About Us</h3><br>
   <small class="lead">Who we are</small><br>
   <h4 class="lead">Helping developers and technologists write the script of the future.</h4>
   <hr class="my-4">
@@ -19,7 +21,7 @@
 </div>
 <div class="container">
   <h3 class="text-center">Our team</h3><br>
-  <div class="row featurette mt-4"><br>
+  <div class="row featurette mt-4 d-flex justify-content-center"><br>
     <div class="col-md-7">
       <h2 class="featurette-heading">Ankit Mitra ---<span class="text-muted"> Owner, Founder</span></h2><br>
       <p class="lead">I started coding when I was 14 years old, ever since I want to be a Full Stack Developer,
@@ -36,12 +38,7 @@
       </ul>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-        aria-label="Placeholder: 500x500">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
+      <img src="{% static 'StackoverflowClone/profile pic.jpg' %}" alt="Image not found"  width="500" height="500">
     </div>
   </div>
   <hr>
@@ -56,7 +53,7 @@
         and finally Python.
         Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes
         yourself, or read from the mistakes which were done by other people.
-        This list <b><a href="https://github.com/guettli/programming-guidelines">summarises</a></b> a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
+        This <strong><a href="https://github.com/guettli/programming-guidelines">list</a></strong> summarises  a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
         It's my personal opinion and feeling. No facts, no single truth.</p>
         <p>Basic info:</p>
         <ul>
@@ -64,20 +61,49 @@
           <li>Age - 44</li>
           <li>Hometown - Germany, Stuttgart </li>
         </ul>
+      </div>
+        <div class="col-md-5 order-md-1">
+      <img src="{% static 'StackoverflowClone/thomas1.jpg' %}" alt="Image not found"  width="500" height="500">
     </div>
-    <div class="col-md-5 order-md-1">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-        aria-label="Placeholder: 500x500">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
+  </div> 
+  <br>
+<br>
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="#" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">© 2017-2020</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Cool stuff</a></li>
+          <li><a class="text-muted" href="#">Random feature</a></li>
+          <li><a class="text-muted" href="#">Team feature</a></li>
+          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          <li><a class="text-muted" href="#">Another one</a></li>
+          <li><a class="text-muted" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
     </div>
-  </div><br>
-  <hr>
-  <footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>© 2020 Stack Overflow Clone <a class="mx-4" href="{% url 'home' %}">Home</a>  <a class="mx-4" href="{% url 'contact' %}">Contact Us</a></p>
   </footer>
 
   {% endblock content %}
