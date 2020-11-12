@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.conf.urls import url
 from Contact import views
 from django.conf.urls.static import static
 
@@ -24,7 +25,8 @@ admin.sites.AdminSite.site_title = 'StackOverFlow Clone Administration'
 admin.sites.AdminSite.index_title = 'Ankit Administration'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^admin/', include(('admin_honeypot.urls', 'admin_honeypot'), namespace='admin_honeypot')),
+    url(r'^secretadmin/', admin.site.urls),
     path('',views.home,name='home'),
     path('contact/',views.contact,name='contact'),
     path('search/',views.search,name='search'),

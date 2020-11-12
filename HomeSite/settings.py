@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'Contact',
     'StackoverflowClone',
     'Authentication',
-    'blog'
+    'blog',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
