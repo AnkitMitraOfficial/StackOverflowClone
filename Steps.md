@@ -1,8 +1,8 @@
-# Now
+# Now (two weeks)
 
 allauth
 
-# Next
+# Next (two months)
 
 ...
 
