@@ -43,6 +43,20 @@ INSTALLED_APPS = [
     'Authentication',
     'blog',
     'admin_honeypot',
+    'django.contrib.sites',
+
+    # django-allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
+]
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +70,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'HomeSite.urls'
+
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+
+#     'allauth.account.auth_backends.AuthenticationBackend',
+# ]
 
 TEMPLATES = [
     {
@@ -128,7 +148,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGIN_URL = '/account/login'
+LOGIN_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

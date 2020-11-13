@@ -31,11 +31,9 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('search/',views.search,name='search'),
 
-    path('signup/',views.signupuser,name='register'),
-    path('login/',views.loginuser,name='login'),
-
     #app urls
      path('blog/', include('blog.urls')),
+     path('account/', include('Authentication.urls')),
      path('home/', include('StackoverflowClone.urls')),
     
 ]

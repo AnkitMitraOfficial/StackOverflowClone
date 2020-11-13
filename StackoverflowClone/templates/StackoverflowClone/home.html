@@ -3,13 +3,15 @@
 {% block content %}
 {% load static %}
     <title>StackOverFlowClone</title>
+
+    {% if user.is_authenticated %}
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner mt-0">
     <div class="carousel-item active">
       <img src="{% static 'StackoverflowClone/main4.jpg' %}" width="1400" height="400" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
@@ -49,5 +51,62 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div><br><br>
+<div class="container text-container">
+  <h4>Hello {{ user.username }}, hope you are having a great day!</h4>
 </div>
+{% else %}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner mt-0">
+    <div class="carousel-item active">
+      <img src="{% static 'StackoverflowClone/main4.jpg' %}" width="1400" height="400" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome to Stack Overflow Clone</h5><br>
+        <h6><kbd> Heaven for programmers</kbd></h6><br>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
+        <a class="btn btn-primary" href="#">Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'StackoverflowClone/main1.jpg' %}" width="1400" height="400" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <strong><h5>Welcome to Stack Overflow Clone</h5></strong><br>
+        <h6> <kbd>Technology,news and more!</kbd></h6><br>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
+        <a class="btn btn-primary" href="#">Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'StackoverflowClone/main2.jpg' %}" width="1400" height="400" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome to Stack Overflow Clone</h5><br>
+        <h6> <kbd>New blog Posts every week</kbd></h6><br>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
+        <a class="btn btn-primary" href="#">Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><br><br>
+
+<div class="container text-container">
+You are Not Authorized, login to access tons of Features :)<br><br>
+<a class="btn btn-primary" href="{% url 'account_login' %}" >Login</a>
+</div>
+{% endif %}
 {% endblock content %}

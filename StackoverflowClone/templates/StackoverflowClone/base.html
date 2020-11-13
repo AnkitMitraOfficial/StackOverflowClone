@@ -17,7 +17,7 @@
     }
   </style>
 </head>
-
+{% if user.is_authenticated %}
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{% url 'homepage' %}">StackOverFlow</a>
@@ -51,13 +51,45 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <form action="{% url 'account_logout' %}" class="form-inline my-2 my-lg-0">
         <li class="nav-item active">
           <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout</button>
       </form>
     </div>
   </nav>
+  {% else %}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'homepage' %}">StackOverFlow</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+        </li>
+        <li class="nav-item">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <li class="nav-item">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'blog:blog' %}">Blog</a>
+              </li>
+            </li>
+          </li>
+        </form>
+      </ul>
+    </div>
+  </nav>
   {% if messages %}
+  {% endif %}
   <ul class="messages">
       {% for message in messages %}
       <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
