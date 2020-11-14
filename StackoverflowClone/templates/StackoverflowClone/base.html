@@ -53,7 +53,7 @@
       </ul>
       <form action="{% url 'account_logout' %}" class="form-inline my-2 my-lg-0">
         <li class="nav-item active">
-          <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout</button>
+          <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout {{ user.username }}</button>
       </form>
     </div>
   </nav>

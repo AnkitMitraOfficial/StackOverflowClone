@@ -1,0 +1,15 @@
+{% extends "Stackoverflowclone/base.html" %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5"><br>
+    <h1>{% trans "Verify Your E-mail Address" %}</h1><br>
+    <p>{% blocktrans %}We have sent an e-mail to you, for your account verification. Follow the link provided in the
+        e-mail to finalize the signup process. Please contact us if you do not receive it within a few
+        minutes.{% endblocktrans %}</p>
+</div>
+</div>
+{% endblock %}

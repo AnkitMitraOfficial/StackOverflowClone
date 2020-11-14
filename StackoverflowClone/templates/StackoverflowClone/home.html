@@ -68,9 +68,9 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Welcome to Stack Overflow Clone</h5><br>
         <h6><kbd> Heaven for programmers</kbd></h6><br>
-        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
-        <a class="btn btn-primary" href="#">Ask a Question</a>
-        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}" disabled >Browse Blogs</a>
+        <a class="btn btn-primary disabled" href="#" >Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}" disabled>Contact Us</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -78,9 +78,9 @@
       <div class="carousel-caption d-none d-md-block">
         <strong><h5>Welcome to Stack Overflow Clone</h5></strong><br>
         <h6> <kbd>Technology,news and more!</kbd></h6><br>
-        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
-        <a class="btn btn-primary" href="#">Ask a Question</a>
-        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}" disabled>Browse Blogs</a>
+        <a class="btn btn-primary" href="#" disabled>Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}" disabled>Contact Us</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -88,9 +88,9 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Welcome to Stack Overflow Clone</h5><br>
         <h6> <kbd>New blog Posts every week</kbd></h6><br>
-        <a class="btn btn-danger" href="{% url 'blog:blog' %}">Browse Blogs</a>
-        <a class="btn btn-primary" href="#">Ask a Question</a>
-        <a class="btn btn-success" href="{% url 'contact' %}">Contact Us</a>
+        <a class="btn btn-danger" href="{% url 'blog:blog' %}" disabled>Browse Blogs</a>
+        <a class="btn btn-primary" href="#" disabled>Ask a Question</a>
+        <a class="btn btn-success" href="{% url 'contact' %}" disabled>Contact Us</a>
       </div>
     </div>
   </div>
@@ -105,7 +105,7 @@
 </div><br><br>
 
 <div class="container text-container">
-You are Not Authorized, login to access tons of Features :)<br><br>
+You are not Authorized or you have not Verified your email adress, login to access tons of features :)<br><br>
 <a class="btn btn-primary" href="{% url 'account_login' %}" >Login</a>
 </div>
 {% endif %}
