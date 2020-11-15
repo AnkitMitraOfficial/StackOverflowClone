@@ -12,6 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <style>
+
+    hr 
+    {
+      border-width: 2px;
+    }
     #invisible {
       visibility: hidden;
     }
@@ -51,9 +56,21 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </ul>
+
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ user.username }}
+  </button>
+  <div class="dropdown-menu">
+    <a href="{% url 'profile' %}" class="dropdown-item">Your Profile</a>
+    <a class="dropdown-item" href="#">Change Password</a>
+    <a class="dropdown-item" href="#">Your questions</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+</div>
       <form action="{% url 'account_logout' %}" class="form-inline my-2 my-lg-0">
         <li class="nav-item active">
-          <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout {{ user.username }}</button>
+          <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout</button>
       </form>
     </div>
   </nav>

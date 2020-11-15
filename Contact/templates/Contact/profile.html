@@ -1,0 +1,47 @@
+{% extends "Stackoverflowclone/base.html" %}
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% block content %}
+<title>Your Profile</title>
+</style>
+
+<br><br>
+<div class="container text-center">
+     <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Username</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Email</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Change Password</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Forget Password</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <h1>Username - {{ user.username }}</h1>
+                <br>
+                <h4>Your account was created on -- {{ user.date_joined }}</h4><br>
+                <a class="btn btn-danger"  href="#" >Delete ccount</a></div>
+            </p>
+            <hr>
+            <div
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                <h3>Your email address is - {{ user.email }}</h3><br>
+                <a href="{% url 'account_email' %}" class="btn btn-primary">Change/Update email</a>
+
+            </div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                <h3>Changing Password frequently is a good way to secure your account</h3><br>
+                <a href="{% url 'account_change_password' %}" class="btn btn-success" >{% trans "Change Password" %}</a>
+            </div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                <h4>Forgot Your Password? Don't worry! We have got your back!</h4><br>
+                <a href="{% url 'account_reset_password' %}" class="btn btn-danger" >{% trans "Forgot Password" %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+{% endblock content %}

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog',
     'admin_honeypot',
     'django.contrib.sites',
+    'crispy_forms',
 
     # django-allauth
     'allauth',

@@ -30,12 +30,16 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('contact/',views.contact,name='contact'),
     path('search/',views.search,name='search'),
+    path('profile/',views.profile,name='profile'),
+    path('users/',views.users,name='users'),
 
     #app urls
      path('blog/', include('blog.urls')),
      path('account/', include('Authentication.urls')),
      path('home/', include('StackoverflowClone.urls')),
     
+    #delete user
+    #  path('del_user/(?P<username>[\w|\W.-]+)/$',views.del_user), 
 ]
 
 handler404 = 'Contact.views.error_404_view' 
