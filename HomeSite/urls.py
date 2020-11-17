@@ -38,8 +38,6 @@ urlpatterns = [
      path('account/', include('Authentication.urls')),
      path('home/', include('StackoverflowClone.urls')),
     
-    #delete user
-    #  path('del_user/(?P<username>[\w|\W.-]+)/$',views.del_user), 
 ]
 
 handler404 = 'Contact.views.error_404_view' 

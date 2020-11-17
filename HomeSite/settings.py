@@ -156,14 +156,17 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
 # custom settings for the Authentication System
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 2
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
-ACCOUNT_SESSION_REMEMBER = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_SESSION_REMEMBER = None
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+
+#For Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587

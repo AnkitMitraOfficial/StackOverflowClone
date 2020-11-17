@@ -55,19 +55,22 @@
             <input class="form-control mr-sm-1" type="search" placeholder="Search anything...." aria-label="Search" name="query" id="query" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-      </ul>
-
-<div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ user.username }}
-  </button>
-  <div class="dropdown-menu">
-    <a href="{% url 'profile' %}" class="dropdown-item">Your Profile</a>
-    <a class="dropdown-item" href="#">Change Password</a>
-    <a class="dropdown-item" href="#">Your questions</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-</div>
+      </ul><div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuMenu" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{ user.username }}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuMenu">
+          <button class="dropdown-item disabled" type="button">{{ user.username }}<br><small>{{ user.email }}</small></button>
+          <div class="dropdown-divider"></div>
+          <a href="{% url 'profile' %}" class="dropdown-item">Your Profile</a>
+          <a class="dropdown-item" href="{% url 'account_change_password' %}">Change Password</a>
+          <a class="dropdown-item" href="#">Your questions</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Change Password</a>
+          <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+        </div>
+      </div>
       <form action="{% url 'account_logout' %}" class="form-inline my-2 my-lg-0">
         <li class="nav-item active">
           <button class="btn btn-outline-danger my-2 my-sm-0 form-control" type="submit">Logout</button>
@@ -105,26 +108,20 @@
       </ul>
     </div>
   </nav>
-  {% if messages %}
   {% endif %}
-  <ul class="messages">
+  {% if messages %}
+  <ul class="messages px-0 mb-0">
       {% for message in messages %}
-      <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
-        <b>{{ message }}</b>
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       {% endfor %}
+      {% endif %}
   </ul>
-  {% endif %}
-  </div>
-  <!-- Optional JavaScript; choose one of the two! -->
-
-
+</div>
   {% block content %}{% endblock content %}
-
-
 </body>
-
 </html>

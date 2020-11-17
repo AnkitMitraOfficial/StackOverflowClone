@@ -5,7 +5,7 @@
     <title>StackOverFlowClone</title>
 
     {% if user.is_authenticated %}
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -53,7 +53,56 @@
   </a>
 </div><br><br>
 <div class="container text-container">
-  <h4>Hello {{ user.username }}, hope you are having a great day!</h4>
+  <h4>What do other's say about Our Website?</h4><br><br>
+  <ul class="list-unstyled">
+    <li class="media">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">Thomas Guttler<span class="badge badge-pill badge-primary mx-2">Admin</span></h5><br>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li><br><br>
+    <li class="media">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">A Random User</h5><br>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li><br><br>
+    <li class="media">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">A real Random user</h5><br>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+  </ul>
+<br><br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Donate Us &#10084;
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Donate Us &#10084;</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        StackOverFlowClone costs you nothing and is free of advertising. We put a lot of work in StackOverFlowClone and cover running costs like servers, SSL certificates, hosting and much more. Because we would like to keep StackOverFlowClone advertising-free we try to finance StackOverFlowClone from donations.
+ 
+By supporting us with a donation you enable less-financially solvent users (especially programmers) to use our platform for free. You can donate via paypal or credit card.
+ 
+Thank you very much!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Donate Us</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 {% else %}
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
