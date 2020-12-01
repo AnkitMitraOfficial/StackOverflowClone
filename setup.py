@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="Ankit Mitra",
     #author_email="",
-    description="StackOverFlowClone"
+    description="StackOverFlowClone",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/AnkitMItraOfficial/StackOverFlow-Clone",
