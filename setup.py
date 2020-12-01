@@ -22,5 +22,6 @@ setuptools.setup(
         'Django>=3.1.4',
         'django-allauth',
         'python-dotenv',
+        'django-crispy-forms',
         ],
 )

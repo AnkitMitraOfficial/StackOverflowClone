@@ -25,7 +25,6 @@ admin.sites.AdminSite.site_title = 'StackOverFlow Clone Administration'
 admin.sites.AdminSite.index_title = 'Ankit Administration'
 
 urlpatterns = [
-    url(r'^admin/', include(('admin_honeypot.urls', 'admin_honeypot'), namespace='admin_honeypot')),
     url(r'^secretadmin/', admin.site.urls),
     path('',views.home,name='home'),
     path('contact/',views.contact,name='contact'),
