@@ -18,5 +18,8 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=['Django>=3.1.4'],
+    install_requires=[
+        'Django>=3.1.4',
+        'django-allauth',
+        ],
 )
