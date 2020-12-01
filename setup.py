@@ -21,5 +21,6 @@ setuptools.setup(
     install_requires=[
         'Django>=3.1.4',
         'django-allauth',
+        'python-dotenv',
         ],
 )
