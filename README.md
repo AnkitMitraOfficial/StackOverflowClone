@@ -55,20 +55,17 @@ It's easy as cutting a piece of cake,just hit on the "download zip" button or "c
 
 It's a free open-source project, anyone who wish can use this project by downloading it. Anyone can modify the project, edit things and delete things. No Restrictions!
  
+## How to run this project?
 
-## How to use this project after downloding?
 
-Open this project by any of your ide/text-editor to edit it and view it.
 
-## How to run this project after downloding?
-
-Simply open a terminal/cmd and cd to the folder where you have stored this project, and then type the following command in your terminal/cmd -- "cd StackOverFlow-Clone",to move inside the project, and then run  -- "python manage.py runserver" to run the server, and then type " http://127.0.0.1:8000/ " in your favorite browser to view the project.
-
-A quick Summary --
-1. Open a terminal/cmd
-2. cd to the folder, where you have this project installed/clone
-3. type "cd StackOverFlow-Clone" to move inside the project
-4. then type "python manage.py runserver" to run the project
-5. and then type "http://127.0.0.1:8000/" in your browser, to view the project 
+1. Create a new virtual environment, enter it and activate it: `python3 -m venv sc-env; cd sc-env; . bin/activate`
+1. Install this repo in "editable" mode. This needs [SSH access to github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh):
+1. `pip install -e git+ssh://git@github.com/AnkitMItraOfficial/StackOverFlow-Clone.git#egg=StackOverFlowClone` 
+1. Django and other requirements get installed automatically.
+1. Got to the git repository: `cd src/stackoverflowclone/`
+1. Start the [runserver](https://docs.djangoproject.com/en/dev/ref/django-admin/#runserver): `python manage.py runserver`
+1. This will start a simple http server: http://127.0.0.1:8000/
+1. Open this URL with your webbrowser.
 
 Happy coding!
