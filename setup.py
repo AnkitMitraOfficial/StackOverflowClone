@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="StackOverFlowClone",
+    name="StackOverflowClone",
     version="0.0.1",
     author="Ankit Mitra",
     #author_email="",
-    description="StackOverFlowClone",
+    description="StackOverflowClone",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AnkitMItraOfficial/StackOverFlow-Clone",
+    url="https://github.com/AnkitMItraOfficial/StackOverflow-Clone",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

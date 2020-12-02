@@ -1,4 +1,4 @@
-# StackOverFlow-Clone
+# StackOverflow-Clone
 
 ## What's the motive of this platform?
 
@@ -61,7 +61,7 @@ It's a free open-source project, anyone who wish can use this project by downloa
 
 1. Create a new virtual environment, enter it and activate it: `python3 -m venv sc-env; cd sc-env; . bin/activate`
 1. Install this repo in "editable" mode. This needs [SSH access to github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh):
-1. `pip install -e git+ssh://git@github.com/AnkitMItraOfficial/StackOverFlow-Clone.git#egg=StackOverFlowClone` 
+1. `pip install -e git+ssh://git@github.com/AnkitMItraOfficial/StackOverflow-Clone.git#egg=StackOverflowClone` 
 1. Django and other requirements get installed automatically.
 1. Got to the git repository: `cd src/stackoverflowclone/`
 1. Start the [runserver](https://docs.djangoproject.com/en/dev/ref/django-admin/#runserver): `python manage.py runserver`

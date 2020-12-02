@@ -20,8 +20,8 @@ from django.conf.urls import url
 from Contact import views
 from django.conf.urls.static import static
 
-admin.sites.AdminSite.site_header = 'StackOverFlow Clone Administration'
-admin.sites.AdminSite.site_title = 'StackOverFlow Clone Administration'
+admin.sites.AdminSite.site_header = 'StackOverflow Clone Administration'
+admin.sites.AdminSite.site_title = 'StackOverflow Clone Administration'
 admin.sites.AdminSite.index_title = 'Ankit Administration'
 
 urlpatterns = [
