@@ -11,7 +11,7 @@ setuptools.setup(
     description="StackOverflowClone",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AnkitMItraOfficial/StackOverflow-Clone",
+    url="https://github.com/AnkitMItraOfficial/StackOverflowClone",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
