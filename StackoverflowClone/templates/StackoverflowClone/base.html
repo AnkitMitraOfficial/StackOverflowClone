@@ -1,8 +1,10 @@
+
+{% load static %}
 <!doctype html>
-<html lang="en">
+ <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+  <link rel="icon" type="image/png"  href="{% static 'StackoverflowClone/logo.png' %}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,7 +27,10 @@
 {% if user.is_authenticated %}
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'homepage' %}">StackOverFlow</a>
+    <a class="navbar-brand" href="{% url 'homepage' %}">
+      <img src="{% static 'StackoverflowClone/logo.png' %}" width="30" height="30" class="d-inline-block align-top">
+     <span><small>StackOverflowClone</small></span>
+ </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -122,6 +127,6 @@
       {% endif %}
   </ul>
 </div>
-  {% block content %}{% endblock content %}
 </body>
 </html>
+{% block content %}{% endblock content %}

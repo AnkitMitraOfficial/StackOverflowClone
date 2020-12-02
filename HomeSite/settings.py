@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'StackoverflowClone',
     'Authentication',
     'blog',
-    'admin_honeypot',
     'django.contrib.sites',
     'crispy_forms',
 
@@ -132,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -160,7 +159,7 @@ MESSAGE_TAGS = {
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 2
-ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 3
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
 ACCOUNT_SESSION_REMEMBER = None
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -169,4 +168,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = '****'
+# EMAIL_HOST_PASSWORD = '****'
 # EMAIL_PORT = 587
