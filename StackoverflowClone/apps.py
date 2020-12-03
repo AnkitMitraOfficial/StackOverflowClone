@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class StackoverflowcloneConfig(AppConfig):
+class StackOverflowCloneConfig(AppConfig):
     name = 'StackoverflowClone'
