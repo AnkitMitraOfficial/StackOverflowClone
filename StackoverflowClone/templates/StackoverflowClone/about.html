@@ -1,120 +1,142 @@
-{% extends 'StackoverflowClone/base.html' %}
-
-{% block content %}
-{% load static %}
-
+{% extends 'StackoverflowClone/base.html' %} {% block content %} {% load static %}
 <title>About Us</title>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 </head>
+
 <body>
-  
-
-<style>
-  hr {
-    border-width: 2px;
-  }
-</style>
-
-<div class="jumbotron">
-  <h3 class="display-4 text-center">About Us</h3><br>
-  <small class="lead">Who we are</small><br>
-  <h4 class="lead">Helping developers and technologists write the script of the future.</h4>
-  <hr class="my-4">
-  <pre>Helping one person might not change the world, but it could change the world for that person.
-
-                                                                                -- Ankit Mitra</pre>
-</div>
-<div class="container">
-  <h3 class="text-center">Meet the team</h3><br>
-  <div class="row featurette mt-4 d-flex justify-content-center align-items-center"><br>
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Ankit Mitra ---<span class="text-muted"> Owner, Founder</span></h2><br>
-      <p class="lead">I started coding when I was 14 years old, ever since I want to be a Full Stack Developer,
-        I knew it wouldn't be easy and I have to get through many obstacles I may not be the smartest
-        person and my whole life people told me no,
-        But coding was the only thing that accepted me, It welcomes anyone with open arms,
-        no matter who are you or where you are form. All you need is a notepad and world becomes your canvas.
-        My aim is to make the world more open and connected </p>
-      <p>Basic info:</p>
-      <ul>
-        <li>Name - Ankit Mitra</li>
-        <li>Age - 15</li>
-        <li>Hometown - India, Howrah </li>
-      </ul>
+    <style>
+        hr {
+            border-width: 2px;
+        }
+    </style>
+    <div class="jumbotron">
+        <h3 class="display-4 text-center">About Us</h3>
+        <br />
+        <small class="lead">Who we are</small><br />
+        <h4 class="lead">
+            Helping developers and technologists write the script of the future.
+        </h4>
+        <hr class="my-4" />
+        <p>
+            Helping one person might not change the world, but it could change the world for that person.
+        </p>
     </div>
-    <div class="col-md-5">
-      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{% static 'StackoverflowClone/profile.jpg' %}" alt="Image not found" width="400" height="500">
+    <div class="container">
+        <h3 class="text-center">Meet the team</h3>
+        <br />
+        <div class="row featurette mt-4 d-flex justify-content-center align-items-center">
+            <br />
+            <div class="col-md-7">
+                <h2 class="featurette-heading">
+                    Ankit Mitra ---<span class="text-muted"> Owner, Founder</span>
+                </h2>
+                <br />
+                <p class="lead">
+                    I started coding when I was 14 years old, ever since I want to be a Full Stack Developer, I knew it wouldn't be easy and I have to get through many obstacles I may not be the smartest person and my whole life people told me no, But coding was the only
+                    thing that accepted me, It welcomes anyone with open arms, no matter who are you or where you are form. All you need is a notepad and world becomes your canvas. My aim is to make the world more open and connected
+                </p>
+                <p>Basic info:</p>
+                <ul>
+                    <li>Name - Ankit Mitra</li>
+                    <li>Age - 15</li>
+                    <li>Hometown - India, Howrah</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{% static 'StackoverflowClone/profile.jpg' %}" alt="Image not found" width="400" height="500" />
+            </div>
+        </div><br>
+        <hr />
     </div>
-  </div>
-  <hr>
-</div>
 
-<br><br>
-<div class="container">
-  <div class="row featurette d-flex justify-content-center align-items-center">
-    <div class="col-md-7 order-md-2 ">
-      <h2 class="featurette-heading">Thomas Güttler --- <span class="text-muted">Ceo, Founder</span></h2>
-      <p class="lead">I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From
-        1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP
-        and finally Python.
-        Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes
-        yourself, or read from the mistakes which were done by other people.
-        This <strong><a href="https://github.com/guettli/programming-guidelines">list</a></strong> summarises  a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
-        It's my personal opinion and feeling. No facts, no single truth.</p>
-        <p>Basic info:</p>
-        <ul>
-          <li>Name - Thomas Güttler</li>
-          <li>Age - 44</li>
-          <li>Hometown - Germany, Chemnitz</li>
-        </ul>
-      </div>
-        <div class="col-md-5">
-      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{% static 'StackoverflowClone/thomas1.jpg' %}" alt="Image not found"  width="450" height="500">
-    </div>
-  </div> 
-  <br>
-<br>
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2" src="{% static 'StackoverflowClone/logo.png' %}" alt="" width="24" height="24">
-        <small class="d-block mb-3 text-muted">©2020</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Cool stuff</a></li>
-          <li><a class="text-muted" href="#">Random feature</a></li>
-          <li><a class="text-muted" href="#">Team feature</a></li>
-          <li><a class="text-muted" href="#">Stuff for developers</a></li>
-          <li><a class="text-muted" href="#">Another one</a></li>
-          <li><a class="text-muted" href="#">Last time</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Resource</a></li>
-          <li><a class="text-muted" href="#">Resource name</a></li>
-          <li><a class="text-muted" href="#">Another resource</a></li>
-          <li><a class="text-muted" href="#">Final resource</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Team</a></li>
-          <li><a class="text-muted" href="#">Locations</a></li>
-          <li><a class="text-muted" href="#">Privacy</a></li>
-          <li><a class="text-muted" href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    <br /><br />
+    <div class="container">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">
+                    Thomas Güttler --- <span class="text-muted">Ceo, Founder</span>
+                </h2>
+                <p class="lead">
+                    I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python. Sometimes I see young
+                    and talented programmers wasting time. There are two ways to learn: Make mistakes yourself, or read from the mistakes which were done by other people. This
+                    <strong><a href="https://github.com/guettli/programming-guidelines">list</a></strong> summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes. It's my personal opinion and feeling. No facts,
+                    no single truth.
+                </p>
+                <p>Basic info:</p>
+                <ul>
+                    <li>Name- Thomas Güttler</li>
+                    <li>Age - 44</li>
+                    <li>Hometown - Germany, Chemnitz</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{% static 'StackoverflowClone/thomas1.jpg' %}" alt="Image not found" width="450" height="500" />
+            </div>
+        </div><br>
+        <hr>
+        <br />
+        <div class="container">
+            <h2>Your Image</h2>
+            <p>You?</p>
+            <div class="card text-center" style="width: 400px">
+                <img class="card-img-top" src="{% static 'StackoverflowClone/avatar1.png' %}" alt="Card image" style="width: 100%" />
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">
+                        As a Full Stack Developer?Front-end Developer? or Back-end Developer
+                    </p>
+                    <a href="#" class="btn btn-primary">Join Us</a>
+                </div>
+            </div>
+            <br />
+            <br />
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="mb-2" src="{% static 'StackoverflowClone/logo.png' %}" alt="" width="24" height="24" />
+                        <small class="d-block mb-3 text-muted">©2020</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Features</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Cool stuff</a></li>
+                            <li><a class="text-muted" href="#">Random feature</a></li>
+                            <li><a class="text-muted" href="#">Team feature</a></li>
+                            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                            <li><a class="text-muted" href="#">Another one</a></li>
+                            <li><a class="text-muted" href="#">Last time</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Resources</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Resource</a></li>
+                            <li><a class="text-muted" href="#">Resource name</a></li>
+                            <li><a class="text-muted" href="#">Another resource</a></li>
+                            <li><a class="text-muted" href="#">Final resource</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>About</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Team</a></li>
+                            <li><a class="text-muted" href="#">Locations</a></li>
+                            <li><a class="text-muted" href="#">Privacy</a></li>
+                            <li><a class="text-muted" href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
 
-  {% endblock content %}
+            {% endblock content %}
+        </div>
+    </div>
+</body>
+
+</html>
